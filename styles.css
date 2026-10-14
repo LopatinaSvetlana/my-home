@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     color: #2c3e50;
     background-color: #ffffff;
     line-height: 1.6;
@@ -125,17 +125,41 @@ nav a:hover {
 .section h2{
     font-size: 25px;
     font-weight: 700;
+    padding-bottom: 5px;
+    text-align: center;
 }
 
 .section h3{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
+    padding: 5px;
+    text-align: center;
+}
+
+.section p{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .section ul li {
     font-size: 16px;
     margin-bottom: 6px;
     padding-left: 15px;
+    text-align: center;
+}
+
+.more-link{
+    display: inline-block;
+    margin-top: 5px;
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.more-link:hover{
+    color:  #1e3a8a;
+    text-decoration: underline;
 }
 
 footer{
@@ -175,6 +199,10 @@ iframe{
 
 .object-info{
     padding: 5px;
+}
+
+.object-info p{
+    text-align: left;
 }
 
 .object-price{
@@ -260,6 +288,12 @@ iframe{
     background-color:#f8fafc;
     border-radius: 5px;
     padding: 10px;
+}
+
+.section .contacts-list li{
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .login-form{

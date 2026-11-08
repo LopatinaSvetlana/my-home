@@ -88,8 +88,8 @@ nav a:hover {
 }
 
 .hero{
-    /*background-color: #1e3a8a;*/
-    background: linear-gradient(135deg, #1e3a8a, #aad2f9);
+    /*background: linear-gradient(135deg, #1e3a8a, #7dafe1);*/
+    background: linear-gradient(135deg, #1d2a4a, #4968bd);
     color:#ffffff;
     padding: 80px 0;
     text-align: center;
@@ -727,6 +727,7 @@ iframe{
     text-shadow: none !important;
     color:#000000 !important;
     background-color: #ffffff !important;
+    background: #ffffff !important;
 }
 
 .print-mode .service-wrapper{

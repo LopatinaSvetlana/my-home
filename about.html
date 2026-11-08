@@ -10,8 +10,13 @@
     <body>
         <header>
             <div class="container">
+                <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <a href="index.html" class="logo"><img src="images/logo.png" alt="МОЙ ДОМ"></a>
-                <nav>
+                <nav id="mainNav">
                     <ul>
                         <li><a href="index.html">Главная</a></li>
                         <li><a href="catalog.html">Каталог объектов</a></li>
@@ -21,23 +26,72 @@
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </nav>
-                <a href="login.html" class="btn-login">Личный кабинет</a>
+                <a href="login.html" class="btn-login"><img src="images/user-icon.svg" alt="Личный кабинет"></a>
             </div>
         </header>
+
+        <button id="printBtn" class="btn-print" title="Версия для печати"><img src="images/print-icon.svg"></button>
 
         <main>
             <section class="section">
                 <div class="container">
-                    <h2>О компании</h2>
-                    <p>Агентство недвижимости «МОЙ ДОМ» работает в Москве с 2006 года. За это время мы помогли более 5000 клиентам купить, продать или арендовать недвижимость.</p>
-                    <p>Наша команда — 25 профессиональных агентов, которые знают рынок Москвы и области. Мы работаем с квартирами, домами, участками и коммерческой недвижимостью.</p>
-                    <h3>Наши показатели</h3>
-                    <ul>
-                        <li>19 лет на рынке недвижимости</li>
-                        <li>Более 5000 успешных сделок</li>
-                        <li>25 профессиональных агентов</li>
-                        <li>Более 1000 объектов в базе</li>
-                    </ul>
+                    <h2>Наша история</h2>
+                    <div class="history-block">
+                        <img src="images/history_pic.jpg" alt="Мой дом">
+                        <div class="history-text">
+                            <p>Агентство «МОЙ ДОМ» начало свою работу в 2006 году. Тогда это была небольшая команда из трёх энтузиастов, 
+                                которые арендовали офис в центре Москвы и мечтали изменить подход к рынку недвижимости. 
+                                В то время многие агентства работали по старинке, не уделяя должного внимания юридической чистоте сделок и прозрачности для клиента.</p>
+                            <p>С самого начала мы решили: будем работать честно. Не скрывать недостатки объектов, не завышать цены, объяснять каждый пункт договора. 
+                                Такой подход быстро принёс свои плоды - первые клиенты начали рекомендовать нас друзьям и знакомым. Уже к 2010 году мы вышли на стабильные 100 сделок в год.</p>
+                            <p>Сегодня «МОЙ ДОМ» - это команда из 25 профессиональных агентов, юристов и ипотечных брокеров. Мы помогли более 5000 семьям найти свой дом. В нашей базе — более 
+                                1500 проверенных объектов. И мы не собираемся останавливаться: каждый год мы внедряем новые технологии, обучаем сотрудников и улучшаем сервис.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2>Наша команда</h2>
+                    <p>Профессионалы, которые помогут с любой задачей</p>
+                    <div class="team-grid">
+                        <div class="team-item">
+                            <img src="images/agent1.jpg" alt="Иванов Иван">
+                            <h3>Иванов Иван</h3>
+                            <p>Ведущий агент</p>
+                        </div>
+                        <div class="team-item">
+                            <img src="images/agent2.jpg" alt="Петрова Екатерина">
+                            <h3>Петрова Екатерина</h3>
+                            <p>Специалист по ипотеке</p>
+                        </div>
+                        <div class="team-item">
+                            <img src="images/agent3.jpg" alt="Сидоров Петр">
+                            <h3>Сидоров Петр</h3>
+                            <p>Юрист по недвижимости</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2>Наши принципы</h2>
+                    <div class="principles-grid">
+                        <div class="principles-item">
+                            <h3>Честность</h3>
+                            <p>Мы не скрываем недостатки объектов и всегда говорим правду о ценах.</p>
+                        </div>
+                        <div class="principles-item">
+                            <h3>Прозрачность</h3>
+                            <p>Вы видите все этапы сделки и знаете, за что платите.</p>
+                        </div>
+                        <div class="principles-item">
+                            <h3>Забота</h3>
+                            <p>Мы на связи 24/7 и помогаем даже после завершения сделки.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -52,6 +106,7 @@
 
         <button id="scrollTop" title="Наверх">^</button>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

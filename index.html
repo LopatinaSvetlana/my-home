@@ -10,10 +10,15 @@
     <body>
         <header>
             <div class="container">
+                <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <a href="index.html" class="logo">
                     <img src="images/logo.png" alt="МОЙ ДОМ">
                 </a>
-                <nav>
+                <nav id="mainNav">
                     <ul>
                         <li><a href="index.html">Главная</a></li>
                         <li><a href="catalog.html">Каталог объектов</a></li>
@@ -23,9 +28,13 @@
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </nav>
-                <a href="login.html" class="btn-login">Личный кабинет</a>
+                <a href="login.html" class="btn-login">
+                    <img src="images/user-icon.svg" alt="Личный кабинет">
+                </a>
             </div>
         </header>
+
+        <button id="printBtn" class="btn-print" title="Версия для печати"><img src="images/print-icon.svg"></button>
 
         <main>
             <section class="hero">
@@ -91,34 +100,77 @@
                                 </div>
                             </div>
                         </div>
-
-                        <a href="catalog.html" class="more-link">Смотреть все объекты</a>
                     </div>   
+                    <a href="catalog.html" class="more-link">Смотреть все объекты</a>
                 </div>
             </section>
 
             <section class="section">
                 <div class="container">
                     <h2>О компании</h2>
-                    <p>"МОЙ ДОМ" - агентство недвижимости в Москве. Помогаем покупать, продавать и арендовать квартиры, дома и участки с 2006 года. Более 5000 довольных клиентов.</p>
-                    <a href="about.html" class="more-link">Подробнее о нас</a>
+                    <div class="about-wrapper">
+                        <div class="about-text">
+                            <p>Мы - экспертное агентство недвижимости в Москве, которое помогает людям находить подходящее жилье для аренды или покупки. 
+                                Предоставляем полный комплекс услуг от подбора подходящих объектов до полного юридического сопровождения.</p>
+                            <a href="about.html" class="more-link">Подробнее о нас</a>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <p class="stat-number">19+</p>
+                                <p class="stat-label">лет на рынке</p>
+                            </div>
+                            <div class="stat-item">
+                                <p class="stat-number">5000+</p>
+                                <p class="stat-label">довольных клиентов</p>
+                            </div>
+                            <div class="stat-item">
+                                <p class="stat-number">1500+</p>
+                                <p class="stat-label">объектов в базе</p>
+                            </div>
+                            <div class="stat-item">
+                                <p class="stat-number">25</p>
+                                <p class="stat-label">профессиональных агентов</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section class="section">
                 <div class="container">
-                    <h2>Наши услуги</h2>
-                    <p>Продажа и покупка квартир и домов, аренда жилья, оценка недвижимости, помощь в оформлении ипотеки и юридическое сопровождение сделок.</p>
-                    <a href="services.html" class="more-link">Все услуги</a>
+                    <h2>Как мы работаем</h2>
+                    <p class="service-text">Мы сделали процесс работы с нами максимально простым и понятным</p>
+                    <div class="service-wrapper">
+                        <div class="service-main">
+                            <img src="images/serv_pic.jpg" alt="Дом"> 
+                        </div>
+                        <div class="service-info">
+                            <div class="serv-item">
+                                <p class="serv-title">Консультация и анализ потребностей</p>
+                                <p class="serv-label">Определяем, какой тип недвижимости вам нужен</p>
+                            </div>
+                            <div class="serv-item">
+                                <p class="serv-title">Поиск и подбор объектов</p>
+                                <p class="serv-label">Предлагаем только проверенные объекты, соответствующие вашему бюджету и целям</p>
+                            </div>
+                            <div class="serv-item">
+                                <p class="serv-title">Просмотр и оценка</p>
+                                <p class="serv-label">Организуем просмотр объектов, предоставляем полную информацию о недвижимости</p>
+                            </div>
+                            <div class="serv-item">
+                                <p class="serv-title">Проверка и подготовка документов</p>
+                                <p class="serv-label">Проводим всестороннюю проверку всех документов и прав собственности</p>
+                            </div>
+                            <div class="serv-item">
+                                <p class="serv-title">Сопровождение сделки</p>
+                                <p class="serv-label">Оказываем поддержку в заключении договора и сопровождаем на всех этапах</p>
+                            </div>
+                            <a href="services.html" class="more-link">Все услуги</a>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="section">
-                <div class="container">
-                    <h2>Мы на карте</h2>
-                    <iframe src="https://yandex.ru/map-widget/v1/?ll=37.617700%2C55.755800&z=12"></iframe>
-                </div>
-            </section>
         </main>
 
         <footer>
@@ -131,6 +183,7 @@
 
         <button id="scrollTop" title="Наверх">^</button>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

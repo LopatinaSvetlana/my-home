@@ -10,8 +10,13 @@
     <body>
         <header>
             <div class="container">
+                <button class="burger-menu" id="burgerBtn" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <a href="index.html" class="logo"><img src="images/logo.png" alt="МОЙ ДОМ"></a>
-                <nav>
+                <nav id="mainNav">
                     <ul>
                         <li><a href="index.html">Главная</a></li>
                         <li><a href="catalog.html">Каталог объектов</a></li>
@@ -21,9 +26,11 @@
                         <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </nav>
-                <a href="login.html" class="btn-login">Личный кабинет</a>
+                <a href="login.html" class="btn-login"><img src="images/user-icon.svg" alt="Личный кабинет"></a>
             </div>
         </header>
+
+        <button id="printBtn" class="btn-print" title="Версия для печати"><img src="images/print-icon.svg"></button>
 
         <main>
             <section class="section">
@@ -31,125 +38,9 @@
                     <h2>Каталог объектов</h2>
                     <p>Квартиры, дома и участки в Москве</p>
 
-                    <div class="objects-grid">
-
-                        <div class="object-card">
-                            <img src="images/kv1.jpg" alt="Студия">
-                            <div class="object-info">
-                                <p class="object-price">5 000 000 руб.</p>
-                                <p class="object-title">Студия</p>
-                                <p class="object-address">Москва, ул. Тверская, 10</p>
-                                <div class="object-features">
-                                    <span>65 м2</span>
-                                    <span>5 этаж</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="object-card">
-                            <img src="images/kv2.jpg" alt="Квартира">
-                            <div class="object-info">
-                                <p class="object-price">25 000 000 руб.</p>
-                                <p class="object-title">2-комн. квартира</p>
-                                <p class="object-address">Москва Сити</p>
-                                <div class="object-features">
-                                    <span>65 м2</span>
-                                    <span>5 этаж</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="object-card">
-                            <img src="images/kv3.jpg" alt="Квартира">
-                            <div class="object-info">
-                                <p class="object-price">6 000 000 руб.</p>
-                                <p class="object-title">2-комн. квартира</p>
-                                <p class="object-address">Москва</p>
-                                <div class="object-features">
-                                    <span>65 м2</span>
-                                    <span>5 этаж</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="object-card">
-                            <img src="images/kv4.jpg" alt="Квартира">
-                            <div class="object-info">
-                                <p class="object-price">15 000 000 руб.</p>
-                                <p class="object-title">2-комн. квартира</p>
-                                <p class="object-address">Москва, ул. Тверская, 15</p>
-                                <div class="object-features">
-                                    <span>65 м2</span>
-                                    <span>5 этаж</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="object-card">
-                            <img src="images/kv5.jpg" alt="Квартира">
-                            <div class="object-info">
-                                <p class="object-price">10 000 000 руб.</p>
-                                <p class="object-title">2-комн. квартира</p>
-                                <p class="object-address">Москва, ул. Тверская, 15</p>
-                                <div class="object-features">
-                                    <span>65 м2</span>
-                                    <span>5 этаж</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="object-card">
-                            <img src="images/kv6.jpg" alt="Квартира">
-                            <div class="object-info">
-                                <p class="object-price">150 500 000 руб.</p>
-                                <p class="object-title">2-комн. квартира</p>
-                                <p class="object-address">Москва, ул. Тверская, 15</p>
-                                <div class="object-features">
-                                    <span>65 м2</span>
-                                    <span>5 этаж</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="object-card">
-                            <img src="images/kv7.jpg" alt="Квартира">
-                            <div class="object-info">
-                                <p class="object-price">31 000 000 руб.</p>
-                                <p class="object-title">2-комн. квартира</p>
-                                <p class="object-address">Москва, ул. Тверская, 15</p>
-                                <div class="object-features">
-                                    <span>65 м2</span>
-                                    <span>5 этаж</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="object-card">
-                            <img src="images/kv8.jpg" alt="Квартира">
-                            <div class="object-info">
-                                <p class="object-price">18 000 000 руб.</p>
-                                <p class="object-title">2-комн. квартира</p>
-                                <p class="object-address">Москва, ул. Тверская, 15</p>
-                                <div class="object-features">
-                                    <span>65 м2</span>
-                                    <span>5 этаж</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="object-card">
-                            <img src="images/kv9.jpg" alt="Квартира">
-                            <div class="object-info">
-                                <p class="object-price">29 000 000 руб.</p>
-                                <p class="object-title">2-комн. квартира</p>
-                                <p class="object-address">Москва, ул. Тверская, 15</p>
-                                <div class="object-features">
-                                    <span>65 м2</span>
-                                    <span>5 этаж</span>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="catalog-layout">
+                        <div class="filters" id="filters"></div>
+                        <div class="objects-grid" id="objectsGrid"></div>
                     </div>
                 </div>
             </section>
@@ -165,6 +56,7 @@
 
         <button id="scrollTop" title="Наверх">^</button>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

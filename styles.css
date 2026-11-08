@@ -73,20 +73,23 @@ nav a:hover {
 }
 
 .btn-login {
-    background-color: #1e3a8a;
-    color: #ffffff;
-    padding: 10px 22px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.btn-login img{
+    height: 60px;
+    width: auto;
 }
 
 .btn-login:hover {
-    background-color: #2563eb;
+    background-color: #f0f0f0;
 }
 
 .hero{
-    background-color: #1e3a8a;
+    /*background-color: #1e3a8a;*/
+    background: linear-gradient(135deg, #1e3a8a, #aad2f9);
     color:#ffffff;
     padding: 80px 0;
     text-align: center;
@@ -96,6 +99,8 @@ nav a:hover {
     font-size: 42px;
     font-weight: 700;
     margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .hero p {
@@ -125,7 +130,7 @@ nav a:hover {
 .section h2{
     font-size: 25px;
     font-weight: 700;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     text-align: center;
 }
 
@@ -134,6 +139,7 @@ nav a:hover {
     font-weight: 700;
     padding: 5px;
     text-align: center;
+    color: #1e3a8a;
 }
 
 .section p{
@@ -147,6 +153,69 @@ nav a:hover {
     margin-bottom: 6px;
     padding-left: 15px;
     text-align: center;
+}
+
+.about-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.about-text p{
+    text-align: justify;
+}
+
+.about-stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.stat-item{
+    background-color: #f8fafc;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.stat-number{
+    font-size: 30px;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+.service-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.service-info p{
+    text-align: left;
+}
+
+.service-main img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+
+.serv-item{
+    background-color: #f8fafc;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.serv-title{
+    font-size: 16px;
+    font-weight: 550;
+    color:#1e3a8a;
+}
+
+.serv-label{
+    font-size: 14px;
 }
 
 .more-link{
@@ -229,6 +298,50 @@ iframe{
     font-size: 13px;
     font-weight: 500;
     color: #7e8599;
+}
+
+.history-block{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.history-block img{
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.history-text p{
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.team-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.team-item img{
+    height: 200px;
+    width: auto;
+}
+
+.team-item{
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.principles-item{
+    background-color: #f8fafc;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .price-table{
@@ -367,6 +480,62 @@ iframe{
     background-color: #2563eb;
 }
 
+.burger-menu{
+    display: none;
+}
+
+.btn-print{
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    z-index: 200;
+    position: fixed;
+    top: 2px;
+    right: 2px;
+}
+
+.btn-print img{
+    height: 24px;
+    width: 24px;
+    display: block;
+}
+
+.btn-print:hover{
+    background-color: #f0f0f0;
+}
+
+.catalog-layout{
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.filters{
+    background-color:#f8fafc;
+    border-radius: 10px;
+    padding: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 180px;
+}
+
+.filter-group label{
+    cursor: pointer;
+    color:#2c3e50;
+}
+
+.filter-group input[type="checkbox"]{
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+#filters input:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
 @media (max-width: 900px){
     .objects-grid{
         grid-template-columns: repeat(2, 1fr);
@@ -377,22 +546,102 @@ iframe{
     }
 
     nav ul{
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
     }
 
     nav a{
         font-size: 14px;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.2s;
     }
 
-    .btn-login{
-        padding: 8px 15px;
-        font-size: 12px;
+    nav a:hover{
+        border-bottom: 2px solid #2563eb;
     }
 
-    .logo img{
-        height: 60px;
+    nav{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        padding: 20px;
+        z-index: 99;
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    .btn-login {
+        height: 45px;
+        width: auto;
+        display: block;
+        margin-left: auto;
+    }
+
+    .btn-login img{
+        height: 45px;  
+        width: auto;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .history-block{
+        grid-template-columns: 1fr;
+    }
+
+    .service-wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .principles-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .history-block img,
+    .service-main img {
+        height: 300px;
+    }
+
+    .burger-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        background: none;
+        border: none;
+        cursor:pointer;
+        padding: 0;
+        margin-right: auto;
+    }
+
+    .burger-menu span{
+        width: 100%;
+        height: 3px;
+        background-color:black;
+        border-radius: 2px;
+    }
+
+    .catalog-layout{
+        grid-template-columns: 1fr;
+    }
+
+    .filters{
+        position: static;
     }
 }
 
@@ -420,12 +669,70 @@ iframe{
         gap: 10px;
     }
 
-    .btn-login{
-        padding: 8px 15px;
-        font-size: 12px;
-    }
-
     .logo img{
         height: 40px;
     }
+
+    .btn-login {
+        height: 32px;
+    }
+
+    .btn-login img{
+        height: 32px;
+    }
+
+    .team-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .history-block img,
+    .service-main img {
+        display: none;
+    }
+
+    .stat-item{
+    padding: 5px;
+    border-radius: 5px;
+}
+    .burger-menu{
+        width: 25px;
+        height: 20px;
+    }
+}
+
+.print-mode header,
+.print-mode footer,
+.print-mode #scrollTop,
+.print-mode .more-link,
+.print-mode iframe,
+.print-mode .service-main img,
+.print-mode .history-block img,
+.print-mode .hero-btn,
+.print-mode .object-card img,
+.print-mode .team-item img{
+    display: none !important;
+}
+
+.print-mode .section{
+    padding: 10px 0;
+}
+
+.print-mode .hero{
+    padding: 20px 0;
+    border-bottom: 2px solid #000000;
+}
+
+.print-mode *{
+    box-shadow: none !important;
+    text-shadow: none !important;
+    color:#000000 !important;
+    background-color: #ffffff !important;
+}
+
+.print-mode .service-wrapper{
+    grid-template-columns: 1fr;
+}
+
+.print-mode .history-block{
+    grid-template-columns: 1fr;
 }
